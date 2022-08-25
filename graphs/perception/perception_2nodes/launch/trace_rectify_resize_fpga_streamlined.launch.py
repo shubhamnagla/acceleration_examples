@@ -37,12 +37,12 @@ def generate_launch_description():
     trace = Trace(
         session_name="trace_rectify_resize_fpga_streamlined",
         events_ust=[
-            "ros2_image_pipeline:*",
+            "ros2_image_pipeline:*"
         ]
         + DEFAULT_EVENTS_ROS,
         context_fields={
                 'kernel': [],
-                'userspace': ['vpid', 'vtid', 'procname'],
+                'userspace': ['vpid', 'vtid', 'procname']
         },
         # events_kernel=DEFAULT_EVENTS_KERNEL,
     )
@@ -99,7 +99,7 @@ def generate_launch_description():
                 "scale_height": 2.0,
                 "scale_width": 2.0,
             }
-        ],
+        ]
     )
 
     return LaunchDescription([
